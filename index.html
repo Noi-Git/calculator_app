@@ -11,6 +11,12 @@
     crossorigin="anonymous">
 
   <title>Hello, world!</title>
+  <style>
+    #loading, #results {
+      display: none;
+    }
+  </style>
+
 </head>
 
 <body class="bg-dark">
@@ -23,17 +29,17 @@
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                <input type="number" step=".01" class="form-control" id="amount" placeholder="Loan Amount">
               </div>
             </div>
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-text">%</span>
-                <input type="number" class="form-control" id="interestt" placeholder="Interest">
+                <input type="number" step=".01" class="form-control" id="interest" placeholder="Interest">
               </div>
             </div>
             <div class="form-group">
-              <input type="number" class="form-control" id="year" placeholder="Years to Repay">
+              <input type="number" step=".01" class="form-control" id="years" placeholder="Years to Repay">
             </div>
             <div class="form-group">
               <input type="submit" value="Calculate" class="btn btn-dark btn-block">
@@ -41,10 +47,10 @@
           </form>
           <!-- LOADER -->
           <div id="loading">
-            <!-- <img src="img/loading.gif" alt="loading image"> -->
+            <img src="img/loading.gif" alt="loading image">
           </div>
           <!-- RESULT -->
-          <div id="result"class="pt-4">
+          <div id="results"class="pt-4">
             <h5>Results</h5>
             <div class="form-group">
               <div class="input-group">
@@ -54,13 +60,13 @@
             </div>
             <div class="form-group">
               <div class="input-group">
-                <span class="input-group-text">Total Payment</span>
+                <span class="input-group-text">Total Payment &nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="number" class="form-control" id="total-payment" disabled>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group">
-                <span class="input-group-text">Total Interestt</span>
+                <span class="input-group-text">Total Interest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="number" class="form-control" id="total-interest" disabled>
               </div>
             </div>
